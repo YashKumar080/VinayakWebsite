@@ -37,7 +37,7 @@ const AdminDashboard = () => {
   const checkUser = async () => {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session) {
-      // navigate('/admin'); // Uncomment to enforce auth
+      navigate('/admin'); // Enforce auth
     }
   };
 
