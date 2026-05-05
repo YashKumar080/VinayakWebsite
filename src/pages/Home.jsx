@@ -406,7 +406,7 @@ const Home = () => {
               </a>
             </div>
 
-            <div className="h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white relative group cursor-pointer">
+            <a href="https://maps.app.goo.gl/9uyDEtLjvXdZHSNr7" target="_blank" rel="noreferrer" className="block h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white relative group cursor-pointer">
               {/* Map Placeholder */}
               <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop" alt="Map Location" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -414,7 +414,7 @@ const Home = () => {
                   <MapPin className="text-primary" /> Open in Maps
                 </span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
