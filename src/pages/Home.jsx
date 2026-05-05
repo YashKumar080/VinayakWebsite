@@ -16,9 +16,9 @@ const Home = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       const { data, error } = await supabase
-        .from('featured_categories')
+        .from('products')
         .select('*')
-        .order('display_order', { ascending: true });
+        .eq('is_featured', true);
       if (!error && data && data.length > 0) {
         setFeaturedCategories(data);
       }
@@ -150,6 +150,10 @@ const Home = () => {
               <p className="text-lg text-gray-600 mb-8 font-body leading-relaxed">
                 Today, as an authorized dealer for premium brands like Astral Paints, we continue to serve locals, contractors, and builders with the same dedication and trust.
               </p>
+
+              <p className="text-xl text-primary font-bold mb-8 font-body leading-relaxed">
+                हम पलसाना और सीकर के हर घर, हर दुकान का भरोसा हैं। असली माल, सही दाम — यही है विनायक ट्रेडिंग कंपनी का वादा।
+              </p>
               
               <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
                 <p className="font-display text-xl italic text-secondary">
@@ -180,40 +184,6 @@ const Home = () => {
               ))}
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* 4. Why Choose Us Section */}
-      <section className="py-24 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-secondary mb-4">Why Trust Us?</h2>
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
-          </div>
-
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {[
-              { title: 'Astral Certified', desc: 'Official authorized dealer for Astral Paints in Rajasthan.', icon: ShieldCheck, color: 'text-accent' },
-              { title: 'Complete Hardware', desc: 'Everything from nails to heavy machinery tools under one roof.', icon: Wrench, color: 'text-gray-700' },
-              { title: 'Fair Pricing', desc: 'Best competitive rates for locals, contractors & bulk buyers.', icon: Wallet, color: 'text-green-600' },
-              { title: 'Community Trusted', desc: 'Decades of deep relationships in Palsana & Sikar district.', icon: Users, color: 'text-primary' },
-            ].map((feature, idx) => (
-              <motion.div key={idx} variants={fadeInUp} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
-                <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gray-50 rounded-full z-0 group-hover:scale-150 transition-transform duration-500`}></div>
-                <div className="relative z-10">
-                  <feature.icon className={`w-12 h-12 mb-6 ${feature.color}`} strokeWidth={1.5} />
-                  <h3 className="font-display text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
@@ -259,6 +229,40 @@ const Home = () => {
               View All <ArrowRight size={18} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* 4. Why Choose Us Section */}
+      <section className="py-24 bg-gray-50 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-secondary mb-4">Why Trust Us?</h2>
+            <div className="w-24 h-1 bg-primary mx-auto"></div>
+          </div>
+
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {[
+              { title: 'Astral Certified', desc: 'Official authorized dealer for Astral Paints in Rajasthan.', icon: ShieldCheck, color: 'text-accent' },
+              { title: 'Complete Hardware', desc: 'Everything from nails to heavy machinery tools under one roof.', icon: Wrench, color: 'text-gray-700' },
+              { title: 'Fair Pricing', desc: 'Best competitive rates for locals, contractors & bulk buyers.', icon: Wallet, color: 'text-green-600' },
+              { title: 'Community Trusted', desc: 'Decades of deep relationships in Palsana & Sikar district.', icon: Users, color: 'text-primary' },
+            ].map((feature, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gray-50 rounded-full z-0 group-hover:scale-150 transition-transform duration-500`}></div>
+                <div className="relative z-10">
+                  <feature.icon className={`w-12 h-12 mb-6 ${feature.color}`} strokeWidth={1.5} />
+                  <h3 className="font-display text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
