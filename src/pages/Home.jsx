@@ -401,7 +401,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded font-medium hover:bg-yellow-600 transition">
+              <a href="https://maps.app.goo.gl/9uyDEtLjvXdZHSNr7" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded font-medium hover:bg-yellow-600 transition">
                 Get Directions <MapPin size={18} />
               </a>
             </div>
