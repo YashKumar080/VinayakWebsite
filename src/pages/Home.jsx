@@ -100,12 +100,15 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-4 w-full"
           >
-            <Link to="/products" className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-yellow-600 transition flex items-center justify-center gap-2 box-glow">
+            <Link to="/products" className="w-full lg:w-auto bg-primary text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-yellow-600 transition flex items-center justify-center gap-2 box-glow">
               Explore Products <ArrowRight size={20} />
             </Link>
-            <Link to="/contact" className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-white/20 transition flex items-center justify-center gap-2">
+            <Link to="/paints" className="w-full lg:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-white/20 transition flex items-center justify-center gap-2">
+              Explore Paints <Paintbrush size={20} />
+            </Link>
+            <Link to="/contact" className="w-full lg:w-auto bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-md font-medium text-lg hover:bg-white/20 transition flex items-center justify-center gap-2">
               Get Directions <MapPin size={20} />
             </Link>
           </motion.div>
