@@ -215,12 +215,26 @@ const AdminDashboard = () => {
                       <input type="text" placeholder="Product Name" required className="border p-2 rounded"
                         value={newProduct.name} onChange={e => setNewProduct({ ...newProduct, name: e.target.value })} />
 
-                      <select className="border p-2 rounded" value={newProduct.category}
-                        onChange={e => setNewProduct({ ...newProduct, category: e.target.value })}>
-                        <option value="Hardware">Hardware</option>
-                        <option value="Paints">Paints</option>
-                        <option value="Waterproofing">Waterproofing</option>
-                      </select>
+                      <div className="flex flex-col gap-2">
+                        <select className="border p-2 rounded" 
+                          value={['Hardware', 'Paints', 'Waterproofing'].includes(newProduct.category) ? newProduct.category : 'Other'}
+                          onChange={e => {
+                            if (e.target.value !== 'Other') {
+                              setNewProduct({ ...newProduct, category: e.target.value });
+                            } else {
+                              setNewProduct({ ...newProduct, category: '' });
+                            }
+                          }}>
+                          <option value="Hardware">Hardware</option>
+                          <option value="Paints">Paints</option>
+                          <option value="Waterproofing">Waterproofing</option>
+                          <option value="Other">Other (Type custom category)</option>
+                        </select>
+                        {!['Hardware', 'Paints', 'Waterproofing'].includes(newProduct.category) && (
+                          <input type="text" placeholder="Enter custom category name" required className="border p-2 rounded"
+                            value={newProduct.category} onChange={e => setNewProduct({ ...newProduct, category: e.target.value })} />
+                        )}
+                      </div>
 
                       <input type="text" placeholder="Price (e.g. ₹500/L)" className="border p-2 rounded"
                         value={newProduct.price} onChange={e => setNewProduct({ ...newProduct, price: e.target.value })} />

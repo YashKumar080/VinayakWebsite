@@ -11,6 +11,7 @@ const Paints = () => {
   const phone = "919828421209";
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchPaints = async () => {
       setLoading(true);
       try {
