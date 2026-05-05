@@ -55,7 +55,7 @@ const Footer = () => {
                 <span className="flex items-center gap-2"><Clock size={16}/> Mon - Sat</span>
                 <span>8:00 AM - 8:00 PM</span>
               </li>
-              <li className="flex items-center justify-between border-b border-gray-700 pb-2 text-red-400">
+              <li className="flex items-center justify-between border-b border-gray-700 pb-2 text-gray-400">
                 <span className="flex items-center gap-2"><Clock size={16}/> Sunday</span>
                 <span>8:00 AM - 8:00 PM</span>
               </li>
