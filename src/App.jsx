@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Products from './pages/Products';
-import AstralPaints from './pages/AstralPaints';
+import Paints from './pages/Paints';
 import Contact from './pages/Contact';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
@@ -20,7 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/astral-paints" element={<AstralPaints />} />
+              <Route path="/paints" element={<Paints />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/admin" element={<AdminLogin />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />

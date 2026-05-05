@@ -21,7 +21,7 @@ const Navbar = () => {
   const links = [
     { name: 'Home', path: '/' },
     { name: 'Products', path: '/products' },
-    { name: 'Astral Paints', path: '/astral-paints' },
+    { name: 'Paints', path: '/paints' },
     { name: 'Contact', path: '/contact' },
   ];
 

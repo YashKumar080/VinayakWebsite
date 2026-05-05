@@ -295,7 +295,7 @@ const Home = () => {
                 ))}
               </ul>
 
-              <Link to="/astral-paints" className="inline-flex bg-primary text-secondary px-8 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-accent transition duration-300">
+              <Link to="/paints" className="inline-flex bg-primary text-secondary px-8 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-accent transition duration-300">
                 View 500+ Shades
               </Link>
             </motion.div>
@@ -327,7 +327,10 @@ const Home = () => {
       {/* 7. Contractor Corner */}
       <section className="py-16 bg-highlight/10 border-y border-highlight/20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-display text-3xl font-bold text-highlight mb-4">Building Something Big?</h2>
+          <h2 className="font-display text-3xl font-bold text-primary  mb-4">Building Something Big?</h2>
+          <p className="font-body text-xl text-highlight font-bold mb-8">
+            हम bulk orders पर special rates देते हैं।
+          </p>
           <p className="text-secondary font-body text-lg mb-8">
             We offer bulk pricing, credit accounts, and fast delivery for contractors and builders in Sikar district.
           </p>
@@ -336,6 +339,21 @@ const Home = () => {
           </a>
         </div>
       </section>
+
+      {/* <section className="">
+        <div className="absolute inset-0 bg-jaali opacity-10"></div>
+        <div className="max-w-5xl mx-auto px-4 relative z-10 text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            Painting a whole building?
+          </h2>
+          <p className="font-body text-xl text-primary font-bold mb-8">
+            हम bulk orders पर special rates देते हैं।
+          </p>
+          <a href="tel:+919828421209" className="inline-flex items-center gap-2 bg-primary text-secondary px-8 py-4 rounded-md font-bold hover:bg-white transition shadow-lg hover:scale-105 duration-300">
+            <Phone size={20} /> Call for Bulk Rates
+          </a>
+        </div>
+      </section> */}
 
       {/* 8. Testimonials Section */}
       <section className="py-24 bg-background">
@@ -405,12 +423,12 @@ const Home = () => {
                 </div>
               </div>
 
-              <a href="https://maps.app.goo.gl/9uyDEtLjvXdZHSNr7" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded font-medium hover:bg-yellow-600 transition">
+              <a href="https://maps.app.goo.gl/BVbaXLSPV2ZRRYkv5" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded font-medium hover:bg-yellow-600 transition">
                 Get Directions <MapPin size={18} />
               </a>
             </div>
 
-            <a href="https://maps.app.goo.gl/9uyDEtLjvXdZHSNr7" target="_blank" rel="noreferrer" className="block h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white relative group cursor-pointer">
+            <a href="https://maps.app.goo.gl/BVbaXLSPV2ZRRYkv5" target="_blank" rel="noreferrer" className="block h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white relative group cursor-pointer">
               {/* Map Placeholder */}
               <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop" alt="Map Location" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

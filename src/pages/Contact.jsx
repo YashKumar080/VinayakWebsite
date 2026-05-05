@@ -101,7 +101,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2">Business Hours</h3>
-                  <p className="text-gray-600 font-body">Mon - Sat: 9:00 AM - 8:00 PM<br/><span className="text-red-500">Sunday: Closed</span></p>
+                  <p className="text-gray-600 font-body">Mon - Sun: 8:00 AM - 8:00 PM</p>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ const Contact = () => {
             {/* Map */}
             <div className="h-64 bg-gray-200 rounded-xl overflow-hidden shadow-md">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113426.37627449557!2d75.140889!3d27.486259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396ca5e000000001%3A0x8e8db2d949437b01!2sPalsana%2C%20Rajasthan%20332402!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=Vinayak%20Trading%20Company%2C%20Palsana%2C%20Sikar&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -180,7 +180,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition outline-none bg-white"
                   >
                     <option value="">Select a category</option>
-                    <option value="astral-paints">Astral Paints</option>
+                    <option value="paints">Paints</option>
                     <option value="hardware">Hardware & Tools</option>
                     <option value="waterproofing">Waterproofing Solutions</option>
                     <option value="other">Other / General Enquiry</option>
